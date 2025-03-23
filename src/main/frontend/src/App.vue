@@ -1,13 +1,20 @@
 <template>
-  <HelloWorld msg="Welcome to Vue in Spring Boot!" />
+  <div id="app">
+    <ChatWindow />
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  components: {
-    HelloWorld
-  }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
 }
+
+#app {
+  height: 100vh;
+}
+</style>
+<script setup lang="ts">
+import ChatWindow from "@/components/ChatWindow.vue";
 </script>
