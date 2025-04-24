@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <ChatWindow />
-  </div>
+  <router-view />
 </template>
 
 <style>
@@ -16,5 +14,4 @@ body {
 }
 </style>
 <script setup lang="ts">
-import ChatWindow from "@/components/ChatWindow.vue";
 </script>
