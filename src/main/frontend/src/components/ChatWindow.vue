@@ -22,9 +22,6 @@ import MessageList from './MessageList.vue';
 import InputArea from './InputArea.vue';
 import ContactList from './ContactList.vue';
 
-defineProps({
-  icon: String // 传入图标组件名
-})
 export default {
   components: {
     MessageList,
