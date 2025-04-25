@@ -1,5 +1,13 @@
 <template>
   <div class="chat-container">
+    <!-- 添加本人头像区域 -->
+    <div class="my-avatar">
+      <img :src="myAvatar" alt="My Avatar" class="avatar" @click="handleMyAvatarClick" />
+      <!-- 添加人的矢量图标 -->
+      <el-icon>
+        <UserFilled class="el-icon-user-solid"/>
+      </el-icon>
+    </div>
     <div class="contact">
       <ContactList
           :contacts="contacts"
@@ -32,21 +40,7 @@ export default {
   data() {
     return {
       activeContact: null,
-      contacts: [
-        {
-          id: 1,
-          name: '张三',
-          avatar: 'https://example.com/avatar1.jpg',
-          lastMessage: ''
-        },
-        {
-          id: 2,
-          name: '李四',
-          avatar: 'https://example.com/avatar2.jpg',
-          lastMessage: ''
-        }
-        // 添加更多联系人...
-      ],
+      contacts: [],
       messages: []
     }
   },
@@ -88,6 +82,20 @@ export default {
 .chat-container {
   display: flex;
   justify-content: center
+}
+.my-avatar {
+  width: 80px; /* 调整头像区域宽度 */
+  display: flex;
+  flex-direction: column;  /*设置为垂直排列 */
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(119, 129, 133);
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .contact {
   width: 400px;
